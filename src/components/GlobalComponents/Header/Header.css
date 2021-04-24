@@ -1,0 +1,10 @@
+.Header{
+    display:flex;justify-content: space-around;padding:20px;
+    background-color: lightblue
+    
+}
+
+
+.header_link{
+    text-decoration: none;
+}
