@@ -1,6 +1,6 @@
 import React from 'react'
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
+import "../DynamicBlogPage/BlogPages.css"
 function Articles({pageContext}) {
     console.log(pageContext)
     const {Item_Details}=pageContext
@@ -16,10 +16,13 @@ function Articles({pageContext}) {
     return (
 
 
-      <div>
-          <h1>ARTICLE PAGES </h1>
+      <div className="Blog_page">
+          <h1>{Title}</h1>
           <br></br>
-    <h3>{Title}</h3>
+  
+          <img src={Image}></img>
+
+          <p>This is my Blog page </p>
 
       </div>
 
