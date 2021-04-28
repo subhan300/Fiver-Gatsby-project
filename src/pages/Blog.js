@@ -1,18 +1,8 @@
-<<<<<<< HEAD
 import React,{useEffect} from "react"
 
 import Header from "../components/GlobalComponents/Header/Header"
 
 
-=======
-import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
-import Header from "../components/GlobalComponents/Header/Header"
-import './blog.css'
-import logo1 from '../assets/blog_images/logo1.png'
-import logoname from '../assets/blog_images/logo-name.png'
-import thumbnil from '../assets/blog_images/Imagen.jpg'
->>>>>>> 887bbd50890002d693cf867d50f81c0a0699ff4d
 export default function Home() {
 
 
@@ -22,22 +12,16 @@ export default function Home() {
 
 
   return (
-<<<<<<< HEAD
-            <>
-      
-  
-             
-=======
     <>
       {/* <Header /> */}
       <div className="wrapper">
         <div className="header__container">
-          <img src={logo1} className="logo"></img>
+          {/* <img src={logo1} className="logo"></img> */}
           <div className="container inner__container">
             <div className="row d-flex justify-content-center mx-auto">
               <div className="col-md-8">
                 <div className="row">
-                  <img className="thumbnil" src={thumbnil}></img>
+                  {/* <img className="thumbnil" src={thumbnil}></img> */}
                 </div>
                 <div className="row d-flex justify-content-center">
                   <p className="text-center mt-5 ">Time</p>
@@ -60,7 +44,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-md-4 border border-secondary">
-                <img className="img-fluid" src={logoname}></img>
+                {/* <img className="img-fluid" src={logoname}></img> */}
                 <div className="blog-section">
                   <div className="row mt-5">
                     <h3 className="blog text-capitalize">b l o g</h3>
@@ -107,7 +91,6 @@ export default function Home() {
                       <span class="badge bg-primary">Primary</span><br />
                       <span class="badge bg-primary">Primary</span>
                     </div>
->>>>>>> 887bbd50890002d693cf867d50f81c0a0699ff4d
 
                   </div>
                 </div>
