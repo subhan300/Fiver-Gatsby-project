@@ -1,6 +1,6 @@
 import React from "react"
 import "../components/PagesComponents/HomeComponents/Index.css"
-
+import "bootstrap/dist/css/bootstrap.min.css"
 // importing components
 import Header from "../components/GlobalComponents/Header/Header"
 import HeroSection from "../components/PagesComponents/HomeComponents/HeroSection"

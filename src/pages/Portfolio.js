@@ -4,7 +4,7 @@ import Header from "../components/GlobalComponents/Header/Header"
 import { graphql } from 'gatsby';
 export default function Home({data}) {
 
-  // console.log(data)
+
   const Data=data.allContentfulReactjsVsAngular.nodes
   const Test=data.allContentfulTestingPurpose.nodes
   console.log(Test,"tetpuepose")
