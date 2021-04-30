@@ -16,8 +16,8 @@ import { graphql } from 'gatsby';
 
 
 export default function Home({data}) {
-  const Data=data.allContentfulImportanceOfRedux.nodes
-  const BlogData=data.allContentfulReactjsVsAngular.nodes
+  const Data=data.allContentfulPortfolios.nodes
+  const BlogData=data.allContentfulBlogs.nodes
   console.log(Data,"homepage data")
 
   return (
@@ -41,27 +41,28 @@ export default function Home({data}) {
 
 export const query = graphql`
 {
-  allContentfulReactjsVsAngular {
+  allContentfulBlogs {
     nodes {
+      slug
       title
       shortDescription {
         shortDescription
       }
-
+      childrenContentfulBlogsDesarticleTextNode {
+        desarticle
+      }
+      featuredblogs
       images {
         file {
           url
         }
       }
-      childContentfulReactjsVsAngularDesarticleTextNode {
-        desarticle
-      }
-
-      slug
     }
   }
-  allContentfulImportanceOfRedux {
+  allContentfulPortfolios {
     nodes {
+      title
+      slug
       reduxinrealworld {
         reduxinrealworld
       }
@@ -73,16 +74,8 @@ export const query = graphql`
           url
         }
       }
+      featuredportfolio
     }
   }
-   
-  allContentfulTestingPurpose {
-    nodes {
-      description
-      title
-      featuredBoolean
-    }
-  }
-
 }
 `

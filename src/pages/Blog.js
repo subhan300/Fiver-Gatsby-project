@@ -5,7 +5,7 @@ import BlogEntries from '../components/PagesComponents/BlogComponents/BlogEntrie
 import { graphql } from 'gatsby';
 import Header from "../components/GlobalComponents/Header/Header"
 export default function Blog({data}) {
-    const Data=data.allContentfulReactjsVsAngular.nodes
+    const Data=data.allContentfulBlogs.nodes
     // console.log(Data)
  
   
@@ -22,15 +22,12 @@ export default function Blog({data}) {
            {Data.map(val=>{
                  const Images_trim=val.images[0].file.url
                  const image= Images_trim.replace('//','https://').trim()
-              
-                 const description=val.childContentfulReactjsVsAngularDesarticleTextNode
-                 console.log( val.shortDescription,"sjsjjjsj")
-
+             
                return(
                <>
-               <BlogEntries title={val.title} slug={val.slug} description={description.desarticle} short={val.shortDescription.shortDescription}  image={image} />
-
-
+                  <BlogEntries title={val.title} slug={`Blogs/${val.slug}`} description={val.desarticle} short={val.shortDescription.shortDescription}  image={image} />
+                 
+             
 
                </>
            )})}
@@ -45,49 +42,41 @@ export default function Blog({data}) {
 
 export const query = graphql`
 {
-  allContentfulReactjsVsAngular {
+  allContentfulBlogs {
     nodes {
+      slug
       title
       shortDescription {
         shortDescription
       }
-
-      images {
-        file {
-          url
-        }
-      }
-      childContentfulReactjsVsAngularDesarticleTextNode {
+      childrenContentfulBlogsDesarticleTextNode {
         desarticle
       }
-
-      slug
-    }
-  }
-  allContentfulImportanceOfRedux {
-    nodes {
-      reduxinrealworld {
-        reduxinrealworld
-      }
+      featuredblogs
       images {
         file {
           url
         }
+      }
+    }
+  }
+  allContentfulPortfolios {
+    nodes {
+      title
+      slug
+      reduxinrealworld {
+        reduxinrealworld
       }
       portfolioShortDescription {
         portfolioShortDescription
       }
-      
+      images {
+        file {
+          url
+        }
+      }
+      featuredportfolio
     }
   }
-   
-  allContentfulTestingPurpose {
-    nodes {
-      description
-      title
-      featuredBoolean
-    }
-  }
-
 }
 `

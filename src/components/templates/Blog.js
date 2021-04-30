@@ -13,8 +13,9 @@ import BlogSliderCard from "../PagesComponents/BlogComponents/BlogSliderCard"
 export default function Home({pageContext}) {
   console.log(pageContext)
   const {Item_Details}=pageContext
-  console.log()
-  const Article_Writing=Item_Details.childContentfulReactjsVsAngularDesarticleTextNode.desarticle
+  console.log(Item_Details,"items")
+  const Article_Writing=Item_Details.childrenContentfulBlogsDesarticleTextNode[0].desarticle
+    console.log(Article_Writing,"kssj")
   const Image=Item_Details.images[0].file.url
   const image= Image.replace('//','https://').trim()
   const Title=Item_Details.title
@@ -46,7 +47,9 @@ export default function Home({pageContext}) {
           </div>
           <div className="article__body">
             <p className="article__date">04/OCT/2020 by Keylen James</p>
-           <h1 className="article__title" >{Title}</h1>
+           <h1 className="article__title" >
+             {Title}
+             </h1>
             {/* <p className="subtitle">
               
             </p> */}

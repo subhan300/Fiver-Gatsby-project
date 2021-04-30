@@ -9,28 +9,42 @@ exports.createPages=async ({actions,graphql})=>{
   
 
   const result=await graphql(` {
-    allContentfulReactjsVsAngular {
+    allContentfulBlogs {
       nodes {
+        slug
         title
+        shortDescription {
+          shortDescription
+        }
+        childrenContentfulBlogsDesarticleTextNode {
+          desarticle
+        }
+        featuredblogs
         images {
           file {
             url
           }
         }
-        childContentfulReactjsVsAngularDesarticleTextNode {
-          desarticle
-        }
-        slug
       }
     }
-
-    allContentfulImportanceOfRedux {
-        nodes {
-          reduxinrealworld {
-            reduxinrealworld
+    allContentfulPortfolios {
+      nodes {
+        title
+        slug
+        reduxinrealworld {
+          reduxinrealworld
+        }
+        portfolioShortDescription {
+          portfolioShortDescription
+        }
+        images {
+          file {
+            url
           }
         }
+        featuredportfolio
       }
+    }
   }
   
   
@@ -39,7 +53,7 @@ exports.createPages=async ({actions,graphql})=>{
   console.log("Result of my data : ",JSON.stringify(result))
 
   
-  result.data.allContentfulReactjsVsAngular.nodes.forEach(
+  result.data.allContentfulBlogs.nodes.forEach(
     (obj)=>{
 console.log(obj)
     createPage({
@@ -58,11 +72,11 @@ console.log(obj)
   })
 
 
-  result.data.allContentfulImportanceOfRedux.nodes.forEach(
+  result.data.allContentfulPortfolios.nodes.forEach(
     (obj)=>{
 console.log(obj)
     createPage({
-      path:`/Portfolio/:id`,
+      path:`/Portfolio/${obj.slug}`,
       component:path.resolve("./src/components/templates/Portfolio.js"),
 
       context:{
