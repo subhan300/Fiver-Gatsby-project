@@ -5,7 +5,7 @@ import BlogEntries from '../components/PagesComponents/BlogComponents/BlogEntrie
 import { graphql } from 'gatsby';
 export default function Blog({data}) {
     const Data=data.allContentfulReactjsVsAngular.nodes
-    console.log(Data)
+    // console.log(Data)
  
   
     // const Test=data.allContentfulTestingPurpose.nodes
@@ -67,6 +67,15 @@ export const query = graphql`
       reduxinrealworld {
         reduxinrealworld
       }
+      images {
+        file {
+          url
+        }
+      }
+      portfolioShortDescription {
+        portfolioShortDescription
+      }
+      
     }
   }
    

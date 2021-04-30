@@ -12,9 +12,14 @@ import PortfolioSection from "../components/PagesComponents/HomeComponents/Portf
 import TestimonialSection from "../components/PagesComponents/HomeComponents/TestimonialSection"
 import BlogandContact from "../components/PagesComponents/HomeComponents/BlogandContact"
 import Footer from "../components/GlobalComponents/Header/Footer"
+import { graphql } from 'gatsby';
 
 
-export default function Home() {
+export default function Home({data}) {
+  const Data=data.allContentfulImportanceOfRedux.nodes
+  const BlogData=data.allContentfulReactjsVsAngular.nodes
+  console.log(Data,"homepage data")
+
   return (
         <>
           {/* <Header /> */}
@@ -23,10 +28,61 @@ export default function Home() {
           <CounterupSection/>
           <ServiceSection/>
           <SkillSection/>
-          <PortfolioSection/>
+          <PortfolioSection DATA={Data} />
           <TestimonialSection/>
-          <BlogandContact/>
+          <BlogandContact BlogData={BlogData}  />
           <Footer/>
         </>
   )
 }
+
+
+
+
+export const query = graphql`
+{
+  allContentfulReactjsVsAngular {
+    nodes {
+      title
+      shortDescription {
+        shortDescription
+      }
+
+      images {
+        file {
+          url
+        }
+      }
+      childContentfulReactjsVsAngularDesarticleTextNode {
+        desarticle
+      }
+
+      slug
+    }
+  }
+  allContentfulImportanceOfRedux {
+    nodes {
+      reduxinrealworld {
+        reduxinrealworld
+      }
+      portfolioShortDescription {
+        portfolioShortDescription
+      }
+      images {
+        file {
+          url
+        }
+      }
+    }
+  }
+   
+  allContentfulTestingPurpose {
+    nodes {
+      description
+      title
+      featuredBoolean
+    }
+  }
+
+}
+`

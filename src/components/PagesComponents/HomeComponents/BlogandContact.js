@@ -4,8 +4,10 @@ import './BlogandContact.css'
 
 import blogShape from '../../../assets/all   images/blog-shape.png'
 import BlogSlider from '../../../assets/all   images/blog-slider.jpg'
-
-function BlogandContact() {
+import {Link} from "gatsby"
+function BlogandContact({BlogData}) {
+    
+   
     return (
         <div>
                 <section class="blog-section">
@@ -43,7 +45,34 @@ function BlogandContact() {
                 <div class="col-lg-6">
                     <div class="blog_right">
                         <div class="slider_area owl-carousel">
-                            <div class="item">
+                          
+                                    {BlogData.map(val => {
+                                        const Images_trim = val.images[0].file.url
+                                        const image = Images_trim.replace('//', 'https://').trim()
+
+                                        const description = val.childContentfulReactjsVsAngularDesarticleTextNode
+                                        console.log(val.shortDescription, "sjsjjjsj")
+
+                                        return (
+
+                                                  
+
+
+                                                       
+                                            <div class="item">
+                                                <img src={image} alt="" />
+                                                <p>{val.shortDescription.shortDescription}</p>
+                                                <Link to={`http://localhost:8000/Blogs/${val.slug}`}> <div className="text-center py-3"><button type="button" class="btn btn-warning ">Read More</button></div></Link>
+                             
+                                            </div>
+                                          
+                                              
+
+
+                                        )
+                                    })}
+                        
+                            {/* <div class="item">
                                 <img src={BlogSlider} alt=""/>
                             </div>
                             <div class="item">
@@ -60,16 +89,13 @@ function BlogandContact() {
                             </div>
                             <div class="item">
                                 <img src={BlogSlider} alt=""/>
-                            </div>
-                            <div class="item">
-                                <img src={BlogSlider} alt=""/>
-                            </div>
+                            </div> */}
                         </div>
                         <div class="slider_content">
                             <h4>4/OCT/2020</h4>
                             <h1>Lorem ipsum</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                            <a href="" class="theme_btn">LEER MAS</a>
+                            <Link  class="theme_btn" to="http://localhost:8000/Blog/">Read ALL </Link>
                         </div>
                     </div>
 
