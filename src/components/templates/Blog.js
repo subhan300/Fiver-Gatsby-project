@@ -2,102 +2,156 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 // import Header from "../components/GlobalComponents/Header/Header"
 import "../PagesComponents/BlogComponents/blog.css"
-import logo1 from "../../assets/blog_images/logo1.png"
-import logoname from '../../assets/blog_images/logo-name.png'
-import thumbnil from '../../assets/blog_images/Imagen.jpg'
+import logo from '../../assets/blog_images/logo-name.png'
+import avatar from '../../assets/blog_images/Imagen.jpg'
+import BlogSliderCard from "../PagesComponents/BlogComponents/BlogSliderCard"
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+
 export default function Home() {
+  
+  let settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    responsive: [
+      {breakpoint: 500, settings: {slidesToShow: 1}},
+      {breakpoint: 700, settings: {slidesToShow: 1}},
+      {breakpoint: 900, settings: {slidesToShow: 2}},
+      {breakpoint: 1200, settings: {slidesToShow: 2}},
+    ],
+    slidesToScroll: 1,
+  };
+  
   return (
     <>
-      {/* <Header /> */}
-      <div className="wrapper">
-        <div className="header__container">
-          <img src={logo1} className="logo"></img>
-          <div className="container inner__container">
-            <div className="row d-flex justify-content-center mx-auto">
-              <div className="col-md-8">
-                <div className="row">
-                  <img className="thumbnil" src={thumbnil}></img>
-                </div>
-                <div className="row d-flex justify-content-center">
-                  <p className="text-center mt-5 ">Time</p>
-                </div>
-                <div className="row d-flex justify-content-center">
-                  <div>
-                    <h1 className="text-center mt-5 ">Lorem Ipsum</h1><br />
-                    <p className="text-center">Subheading</p>
-                  </div>
-                </div>
-                <div className="row d-flex justify-content-center">
-                  <p className=" text-center">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                    It has roots in a piece of classical Latin literature from 45 BC,
-                    making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                    comes from a line in section 1.10.32.
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-4 border border-secondary">
-                <img className="img-fluid" src={logoname}></img>
-                <div className="blog-section">
-                  <div className="row mt-5">
-                    <h3 className="blog text-capitalize">b l o g</h3>
-                    <p className="fw-light">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                  </p>
-                  </div>
-                </div>
-                <div className="post-section">
-                  <div className="row mt-5">
-                    <h3 className="post-recients text-capitalize">post recients</h3>
-                    <p className="fw-light">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                        </p>
-                  </div>
-                </div>
-                <div className="category-section">
-                  <div className="row mt-5">
-                    <h3 className="categorias">C A T E G O R I A S</h3>
-                  </div>
-                  <div className="row mt-3">
-                    <ul className="navbar-nav">
-                      <li className="nav-item"><a className="nav-link">SEO</a></li>
-                      <li className="nav-item"><a className="nav-link">Elemetor</a></li>
-                      <li className="nav-item"><a className="nav-link">Others</a></li>
-                      <li className="nav-item"><a className="nav-link">SEO</a></li>
-                      <li className="nav-item"><a className="nav-link">SEO</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="etiquetas-section">
-                  <div className="row mt-5">
-                    <h3 className="post-recients text-capitalize">E T I Q U E T A S </h3>
-                  </div>
-                  <div className="row mt-3">
-                    <div>
-                      <span class="badge bg-primary mr-4">Primary</span>
-                      <span class="badge bg-primary">Primary</span><br />
-                      <span class="badge bg-primary mr-4">Primary</span>
-                      <span class="badge bg-primary">Primary</span><br />
-                      <span class="badge bg-primary">Primary</span>
-                    </div>
+      <div className="blog__wrapper">
+        <div className="main__div_blog">
+          <div className="blog__avatar">
+            <img src={avatar} />
+          </div>
+          <div className="article__body">
+            <p className="article__date">04/OCT/2020 by Keylen James</p>
+            <h1 className="article__title">Lorem Ipsum</h1>
+            <p className="subtitle">
+              Lorem ipsum dolor sit amit
+            </p>
 
-                  </div>
-                </div>
+            <p>
+            Runway vintage innovation prediction 
+            modern attractive posture model sportswear
+             color. Trade comfortable shape condition.
+              Minimalist jumper quantity collection. 
+              Allure shade cheap industry halter high
+              heels imprint tones stitching leotard 
+              skirt look. Trade phenomenon trendwatching 
+              comfortable bows mainstream waistline 
+              value popular mannequin couture shape 
+              availability expensive. Hand-made condition 
+              signature comfortable xs stitching wholesale 
+              tailored ribbon quantity.
+            </p> <br/>
 
+            <p>
+            Glossy bows inspiration textile trade hippie 
+            ribbon sportswear. Jewelry pret-a-porter 
+            prediction consumer revealing wholesale one-of-a-kind
+            instagram stitching cheap stylish tones 
+            modification wardrobe. Bold bargain prediction
+            trademark minimalist. Zipper skirt emphasis xs 
+            classic instagram. Stock pret-a-porter textile 
+            etiquette instagram pastel minimalist affection. 
+            Tailor glitter young. Zipper outlet quality 
+            photography minimalist imagination outfit hair. 
+            Proportion zipper sleeveless embroidery retailer 
+            inexpensive lingerie bargain. Identity stitching 
+            leotard stock. Hand-made taste outlet mode shape.
+            </p><br/>
 
-              </div>
-            </div>
+            <p>
+            Modern jewelry emphasis look comfortable one-of-a-kind
+             couture stitching expensive consumer pattern artificial 
+             outlet affection. Tailor innovation expirement ready-made 
+             unique couture combination original label synthetic 
+             prediction shawl modern. Ribbon adjustment clothes bold 
+             old-fashioned craftmanship halter shape wardrobe ensemble 
+             revealing trade trademark. Zipper wholesale bodice. 
+             Sleeveless pumps stylish illustration embroidery fashion 
+             modification garment cut jumper. Effect wholesale 
+             vogue stock. Impeccable photography color price trade 
+             conformity synthetic prediction stitching imprint value 
+             petticoat jersey. Inexpensive hanger stock accessory clothes 
+             extraordinary trademark tones swag outlet influence. 
+             Handbag braiding apparel availability phenomenon influence 
+             production mode cut. Lingerie garment vintage 
+             runway jeans couture.
+            </p><br/>
+
+            <p>
+            Comfortable hippie one-of-a-kind braiding urban 
+            waistline glossy creative beautiful fashion 
+            xl ensemble. Skirt effect tailored revealing 
+            wardrobe classic. Conformity apparel sportswear 
+            quality allure hippie breathable couture illustration 
+            swag cheap brand stock beautiful. Enhance model 
+            photography sleeveless artificial xl casual inspiration
+            waistline item. Condition cut color quality item 
+            affection. Ensemble quality artistic sleeveless 
+            inexpensive waistline textile clothes one-of-a-kind 
+            posture tailored wholesale swim-wear instagram. 
+            Expirement ribbon catwalk hand-made brand comfortable 
+            clothing unique signature glossy clothes. 
+            </p>
+          </div>
+          <div className="blog__slider">
+          <Slider {...settings}>
+            <BlogSliderCard 
+              avatar={avatar}
+            />
+            <BlogSliderCard 
+              avatar={avatar}
+            />
+            <BlogSliderCard 
+              avatar={avatar}
+            />
+        </Slider>
           </div>
         </div>
+        <div className="blog__intro">
+          <img src={logo} className="logo"/>
+          <h2>&#60;BLOG&#62;</h2>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore.
+          </p>
 
+          <h2>&#60;POSTS RECIENTES&#62;</h2>
+          <p><strong>Lorem Ipsum</strong> <br/> 04/oct2020</p>
+          
+          <p><strong>Lorem Ipsum</strong> <br/> 04/oct2020</p>
+          
+          <p><strong>Lorem Ipsum</strong> <br/> 04/oct/2020</p>
+
+          <h2>&#60;CATEGORIAS&#62;</h2>
+          <ul>
+            <li>Desarallo Web</li>
+            <li>Diseno Web</li>
+            <li>Ecommerce</li>
+            <li>SEO</li>
+            <li>Elementor</li>
+            <li>Otros</li>
+          </ul>
+
+          <h2>&#60;ETIQUETAS&#62;</h2>
+          <span>ETIQUETA</span> <span>ETIQUETA</span><br/>
+          <span>ETIQUETA</span> <span>ETIQUETA</span><br/>
+          <span>ETIQUETA</span>
+        </div>
       </div>
+      
     </>
-
   )
 }

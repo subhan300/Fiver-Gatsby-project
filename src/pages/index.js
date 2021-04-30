@@ -17,7 +17,7 @@ import Footer from "../components/GlobalComponents/Header/Footer"
 export default function Home() {
   return (
         <>
-          {/* <Header /> */}
+          <Header />
           <HeroSection/>
           <SobremiSection/>
           <CounterupSection/>
