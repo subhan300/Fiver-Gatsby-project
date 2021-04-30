@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border:2px solid blue;
+    /* border:2px solid blue; */
     widows: 100% !important;
     
 }
@@ -13,10 +13,10 @@
     text-align: center;
 }
 .blog_img{
-    width:100%;
+    width:70%;
 }
 .blog_content{
-    border:2px solid green;
+    /* border:2px solid green; */
     width:90%;
     box-sizing: border-box;
     padding: 16px;

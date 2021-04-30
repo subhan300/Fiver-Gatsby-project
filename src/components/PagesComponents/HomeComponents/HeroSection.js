@@ -2,10 +2,11 @@ import React from 'react'
 import './HeroSection.css'
 
 import logo from '../../../assets/all   images/logo.png'
-
+// import Header from "../../GlobalComponents/Header/Header"
 function HeroSection() {
     return (
         <section class="hero_section">
+        
         <div class="container">
             <div class="hero_content">
                 <h6>¡HOLA!</h6>

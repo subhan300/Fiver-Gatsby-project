@@ -1,16 +1,26 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-// import Header from "../components/GlobalComponents/Header/Header"
+import Header from "../GlobalComponents/Header/Header"
 import "../PagesComponents/BlogComponents/blog.css"
 import logo from '../../assets/blog_images/logo-name.png'
 import avatar from '../../assets/blog_images/Imagen.jpg'
 import BlogSliderCard from "../PagesComponents/BlogComponents/BlogSliderCard"
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+// import Slider from 'react-slick'
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
 
 
-export default function Home() {
+export default function Home({pageContext}) {
+  console.log(pageContext)
+  const {Item_Details}=pageContext
+  console.log()
+  const Article_Writing=Item_Details.childContentfulReactjsVsAngularDesarticleTextNode.desarticle
+  const Image=Item_Details.images[0].file.url
+  const image= Image.replace('//','https://').trim()
+  const Title=Item_Details.title
+  console.log(Title,"title")
+  console.log(image,"image")
+
   
   let settings = {
     infinite: true,
@@ -27,19 +37,22 @@ export default function Home() {
   
   return (
     <>
+        <Header />
       <div className="blog__wrapper">
+      
         <div className="main__div_blog">
           <div className="blog__avatar">
-            <img src={avatar} />
+            <img src={image} />
           </div>
           <div className="article__body">
             <p className="article__date">04/OCT/2020 by Keylen James</p>
-            <h1 className="article__title">Lorem Ipsum</h1>
-            <p className="subtitle">
-              Lorem ipsum dolor sit amit
-            </p>
-
-            <p>
+           <h1 className="article__title" >{Title}</h1>
+            {/* <p className="subtitle">
+              
+            </p> */}
+            <br></br>
+           {Article_Writing}
+            {/* <p>
             Runway vintage innovation prediction 
             modern attractive posture model sportswear
              color. Trade comfortable shape condition.
@@ -103,9 +116,9 @@ export default function Home() {
             posture tailored wholesale swim-wear instagram. 
             Expirement ribbon catwalk hand-made brand comfortable 
             clothing unique signature glossy clothes. 
-            </p>
+            </p> */}
           </div>
-          <div className="blog__slider">
+          {/* <div className="blog__slider">
           <Slider {...settings}>
             <BlogSliderCard 
               avatar={avatar}
@@ -117,7 +130,7 @@ export default function Home() {
               avatar={avatar}
             />
         </Slider>
-          </div>
+          </div> */}
         </div>
         <div className="blog__intro">
           <img src={logo} className="logo"/>

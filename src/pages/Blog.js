@@ -3,6 +3,7 @@ import HeroSection from "../components/PagesComponents/HomeComponents/HeroSectio
 import "../components/PagesComponents/BlogComponents/BlogEntries/BlogEntries"
 import BlogEntries from '../components/PagesComponents/BlogComponents/BlogEntries/BlogEntries'
 import { graphql } from 'gatsby';
+import Header from "../components/GlobalComponents/Header/Header"
 export default function Blog({data}) {
     const Data=data.allContentfulReactjsVsAngular.nodes
     // console.log(Data)
@@ -14,7 +15,8 @@ export default function Blog({data}) {
     //     .filter(city => city.featuredBoolean==false)
     //     .map(city => console.log(city.title,"dekh ab zara"));
     return (
-        <div style={{width:"100%",border:"2px solid yellow"}}>
+        <div style={{width:"100%"}}>
+            <Header />
             <HeroSection />
             <h1 className="text-center py-5" style={{fontSize:"60px"}}>Visit Our Blogs</h1>
            {Data.map(val=>{
