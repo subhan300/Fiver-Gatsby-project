@@ -22,7 +22,7 @@ export default function Home({data}) {
 
   return (
         <>
-          {/* <Header /> */}
+          <Header />
           <HeroSection/>
           <SobremiSection/>
           <CounterupSection/>

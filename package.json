@@ -23,7 +23,9 @@
     "gatsby-source-contentful": "^5.3.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "2.2.1"
