@@ -18,8 +18,8 @@ import { graphql } from 'gatsby';
 export default function Home({data}) {
   const Data=data.allContentfulPortfolios.nodes
   const BlogData=data.allContentfulBlogs.nodes
-  console.log(Data,"homepage data")
-
+  // console.log(Data,"homepage data")
+  
   return (
         <>
           <Header />

@@ -6,6 +6,8 @@ import blogShape from '../../../assets/all   images/blog-shape.png'
 import BlogSlider from '../../../assets/all   images/blog-slider.jpg'
 import {Link} from "gatsby"
 function BlogandContact({BlogData}) {
+    let data=BlogData.filter(city =>city.featuredblogs==true)
+console.log(data,"this is ymdata #######################################")
     
    
     return (
@@ -46,7 +48,7 @@ function BlogandContact({BlogData}) {
                     <div class="blog_right">
                         <div class="slider_area owl-carousel">
                           
-                                    {BlogData.map(val => {
+                                    {data.map(val => {
                                         const Images_trim = val.images[0].file.url
                                         const image = Images_trim.replace('//', 'https://').trim()
 

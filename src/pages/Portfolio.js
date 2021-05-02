@@ -6,14 +6,10 @@ import { graphql } from 'gatsby';
 import Header from "../components/GlobalComponents/Header/Header"
 export default function Blog({data}) {
     const Data=data.allContentfulPortfolios.nodes
-    console.log(Data)
+    // console.log(Data)
     
   
-    // const Test=data.allContentfulTestingPurpose.nodes
-    // console.log(Test,"tetpuepose")
-    // Test
-    //     .filter(city => city.featuredBoolean==false)
-    //     .map(city => console.log(city.title,"dekh ab zara"));
+  
     return (
         <div style={{width:"100%"}}>
             <Header />
