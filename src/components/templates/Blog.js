@@ -9,18 +9,18 @@ import BlogSliderCard from "../PagesComponents/BlogComponents/BlogSliderCard"
 // import "slick-carousel/slick/slick.css"
 // import "slick-carousel/slick/slick-theme.css"
 
-import Helmet from "react-helmet"
+
 export default function Home({pageContext}) {
-  
+  console.log(pageContext)
   const {Item_Details}=pageContext
- 
+  console.log(Item_Details,"items")
   const Article_Writing=Item_Details.childrenContentfulBlogsDesarticleTextNode[0].desarticle
-  
+    console.log(Article_Writing,"kssj")
   const Image=Item_Details.images[0].file.url
   const image= Image.replace('//','https://').trim()
   const Title=Item_Details.title
-  console.log(Item_Details)
-
+  console.log(Title,"title")
+  console.log(image,"image")
 
   
   let settings = {
@@ -38,20 +38,7 @@ export default function Home({pageContext}) {
   
   return (
     <>
-        <Header style={{border:"2px solid grey"}} />
-        <Helmet>
-            <title>{Title}</title>
-            <meta name="description" content={Title}></meta>
-            <meta name="keywords" content={Item_Details.keywords}></meta>
-            <meta property="og:title" content={Title}></meta>
-            <meta property="og:type" content={Item_Details.type}></meta>
-            <meta property="og:description" content={Item_Details.shortDescription.shortDescription}></meta>
-            <meta property="og:image" content={image}></meta>
-            <meta property="og:locale" content={Item_Details.node_locale}></meta>
-            <meta property="og:url" content={`localhost:8000/Blogs/${Item_Details.slug}`}></meta>
-            <link rel="canonical" href={`localhost:8000/Blogs/${Item_Details.slug}`}></link>
-         </Helmet>
-       
+        {/* <Header /> */}
       <div className="blog__wrapper">
       
         <div className="main__div_blog">
