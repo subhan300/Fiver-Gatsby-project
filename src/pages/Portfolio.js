@@ -4,6 +4,7 @@ import "../components/PagesComponents/BlogComponents/BlogEntries/BlogEntries"
 import BlogEntries from '../components/PagesComponents/BlogComponents/BlogEntries/BlogEntries'
 import { graphql } from 'gatsby';
 import Header from "../components/GlobalComponents/Header/Header"
+import Helmet from "react-helmet"
 export default function Blog({data}) {
     const Data=data.allContentfulPortfolios.nodes
     // console.log(Data)
