@@ -43,7 +43,7 @@ export default function Home({pageContext}) {
       
         <div className="main__div_blog">
           <div className="blog__avatar">
-            <img src={image} />
+          <img src={image} />
           </div>
           <div className="article__body">
             <p className="article__date">04/OCT/2020 by Keylen James</p>
