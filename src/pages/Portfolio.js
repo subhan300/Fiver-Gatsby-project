@@ -13,6 +13,18 @@ export default function Blog({data}) {
     return (
         <div style={{width:"100%"}}>
             <Header />
+            <Helmet>
+            <title>ALL Portfolio POST</title>
+            <meta name="description" content="this is my Portfolio page were all blogs are displayed"></meta>
+            <meta name="keywords" content="portfolios website all popular blog"></meta>
+            <meta property="og:title" content="ALL portfolios POST"></meta>
+            <meta property="og:type" content="portfolios posts"></meta>
+            <meta property="og:description" content="this is myportfolios page were all portfolios are displayed"></meta>
+            <meta property="og:image" content=""></meta>
+            <meta property="og:locale" content={Data.node_locale}></meta>
+            <meta property="og:url" content="http://localhost:8000/Portfolio"></meta>
+            <link rel="canonical" href="http://localhost:8000/Portfolio" ></link>
+         </Helmet>
             <HeroSection />
             <h1 className="text-center py-5" style={{fontSize:"60px"}}>Visit Our Portfolios</h1>
             {

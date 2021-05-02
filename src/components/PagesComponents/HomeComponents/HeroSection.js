@@ -1,6 +1,6 @@
 import React from 'react'
 import './HeroSection.css'
-
+// import {Link} from  "gatsby"
 import logo from '../../../assets/all   images/logo.png'
 // import Header from "../../GlobalComponents/Header/Header"
 function HeroSection() {
@@ -15,7 +15,7 @@ function HeroSection() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim.</p>
                 <a href="#" class="theme_btn">CONOCEME</a>
                 <div class="hero_logo">
-                    <a href="#"><img src={logo} alt=""/></a>
+                     <img src={logo} alt=""/>
                 </div>
             </div>
         </div>

@@ -13,15 +13,29 @@ import TestimonialSection from "../components/PagesComponents/HomeComponents/Tes
 import BlogandContact from "../components/PagesComponents/HomeComponents/BlogandContact"
 import Footer from "../components/GlobalComponents/Header/Footer"
 import { graphql } from 'gatsby';
-
+import Helmet from "react-helmet"
 
 export default function Home({data}) {
   const Data=data.allContentfulPortfolios.nodes
   const BlogData=data.allContentfulBlogs.nodes
   // console.log(Data,"homepage data")
+  const HomeData=data.allContentfulHomePage.nodes
+  console.log(HomeData)
   
   return (
         <>
+         <Helmet>
+            <title>{HomeData.title}</title>
+            <meta name="description" content={HomeData.description}></meta>
+            <meta name="keywords" content={HomeData.keywords}></meta>
+            <meta property="og:title" content={HomeData.title}></meta>
+            <meta property="og:type" content={HomeData.type}></meta>
+            <meta property="og:description" content={HomeData.description}></meta>
+            <meta property="og:image" content=""></meta>
+            <meta property="og:locale" content={HomeData.node_locale}></meta>
+            <meta property="og:url" content={HomeData.websiteUrl}></meta>
+            <link rel="canonical" href={HomeData.websiteUrl}></link>
+         </Helmet>
           <Header />
           <HeroSection/>
           <SobremiSection/>
@@ -43,6 +57,8 @@ export const query = graphql`
 {
   allContentfulBlogs {
     nodes {
+      node_locale
+      keywords
       slug
       title
       shortDescription {
@@ -59,8 +75,20 @@ export const query = graphql`
       }
     }
   }
+  allContentfulHomePage {
+    nodes {
+      type
+      title
+      description
+      node_locale
+      websiteUrl
+      keywords
+    }
+  }
   allContentfulPortfolios {
     nodes {
+      node_locale
+      keywords
       title
       slug
       reduxinrealworld {
