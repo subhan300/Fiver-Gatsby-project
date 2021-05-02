@@ -273,11 +273,15 @@
 }     
 
 }
+<<<<<<< HEAD
+@media (max-width: 800px) {
+=======
 
 
 
 
 @media (min-width: 601px) and  (max-width: 800px) {
+>>>>>>> 44e1a99400a6bf71ad9401d39be75327cb2f4d8d
 
 
     .blog__wrapper{

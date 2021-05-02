@@ -1,8 +1,10 @@
 import React from 'react'
+import image from '../../assets/portfolio_images/business-medium.jpg'
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import "../PagesComponents/Portfolio components/Portfolio.css"
 import logo from '../../assets/blog_images/logo-name.png'
 import bg from '../../assets/blog_images/portfolio image.jpg'
+import Footer from '../GlobalComponents/Header/Footer'
 
 
 function Portfolio() {
