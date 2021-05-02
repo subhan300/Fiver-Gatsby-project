@@ -1,5 +1,5 @@
 
-const { Component } = require("react");
+// const { Component } = require("react");
 
 
 var path=require("path");
@@ -11,6 +11,8 @@ exports.createPages=async ({actions,graphql})=>{
   const result=await graphql(` {
     allContentfulBlogs {
       nodes {
+       type
+        keywords
         slug
         title
         shortDescription {
@@ -27,8 +29,11 @@ exports.createPages=async ({actions,graphql})=>{
         }
       }
     }
+    
     allContentfulPortfolios {
       nodes {
+        type
+        keywords
         title
         slug
         reduxinrealworld {
@@ -50,12 +55,12 @@ exports.createPages=async ({actions,graphql})=>{
   
   `)
  
-  console.log("Result of my data : ",JSON.stringify(result))
+  // console.log("Result of my data : ",JSON.stringify(result))
 
   
   result.data.allContentfulBlogs.nodes.forEach(
     (obj)=>{
-console.log(obj)
+// console.log(obj)
     createPage({
       path:`/Blogs/${obj.slug}`,
       component:path.resolve("./src/components/templates/Blog.js"),
@@ -74,7 +79,7 @@ console.log(obj)
 
   result.data.allContentfulPortfolios.nodes.forEach(
     (obj)=>{
-console.log(obj)
+// console.log(obj)
     createPage({
       path:`/Portfolio/${obj.slug}`,
       component:path.resolve("./src/components/templates/Portfolio.js"),

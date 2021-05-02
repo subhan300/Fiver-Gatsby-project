@@ -4,19 +4,26 @@ import "../components/PagesComponents/BlogComponents/BlogEntries/BlogEntries"
 import BlogEntries from '../components/PagesComponents/BlogComponents/BlogEntries/BlogEntries'
 import { graphql } from 'gatsby';
 import Header from "../components/GlobalComponents/Header/Header"
+import Helmet from "react-helmet"
 export default function Blog({data}) {
     const Data=data.allContentfulBlogs.nodes
-    // console.log(Data)
- 
-  
-    // const Test=data.allContentfulTestingPurpose.nodes
-    // console.log(Test,"tetpuepose")
-    // Test
-    //     .filter(city => city.featuredBoolean==false)
-    //     .map(city => console.log(city.title,"dekh ab zara"));
+     
     return (
         <div style={{width:"100%"}}>
+          
             <Header />
+            <Helmet>
+            <title>ALL BLOGS POST</title>
+            <meta name="description" content="this is my blog page were all blogs are displayed"></meta>
+            <meta name="keywords" content="blogs website all popular blog"></meta>
+            <meta property="og:title" content="ALL BLOGS POST"></meta>
+            <meta property="og:type" content="blog posts"></meta>
+            <meta property="og:description" content="this is my blog page were all blogs are displayed"></meta>
+            <meta property="og:image" content=""></meta>
+            <meta property="og:locale" content={Data.node_locale}></meta>
+            <meta property="og:url" content="http://localhost:8000/Blog"></meta>
+            <link rel="canonical" href="http://localhost:8000/Blog" ></link>
+         </Helmet>
             <HeroSection />
             <h1 className="text-center py-5" style={{fontSize:"60px"}}>Visit Our Blogs</h1>
            {Data.map(val=>{

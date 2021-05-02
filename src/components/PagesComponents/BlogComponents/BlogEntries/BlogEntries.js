@@ -16,8 +16,10 @@ function BlogEntries({title,description,slug,image,short}) {
           <div className="blog_content">  
                              <p className="py-1">
                                {short} 
-                              <Link to={`http://localhost:8000/${slug}`}> <div className="text-center py-3"><button type="button" class="btn btn-warning ">Read More</button></div></Link>
-                             
+                              {/* <Link to={`http://localhost:8000/${slug}`}>  */}
+                              <div className="text-center py-3"><Link type="button" class="btn btn-warning "  to={`http://localhost:8000/${slug}`}>Read More</Link></div>
+                              {/* </Link>
+                              */}
                               </p>
                              
                           
