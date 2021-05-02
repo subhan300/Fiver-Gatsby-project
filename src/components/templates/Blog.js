@@ -38,7 +38,7 @@ export default function Home({pageContext}) {
   
   return (
     <>
-        <Header />
+        <Header style={{border:"2px solid grey"}} />
         <Helmet>
             <title>{Title}</title>
             <meta name="description" content={Title}></meta>
@@ -51,6 +51,7 @@ export default function Home({pageContext}) {
             <meta property="og:url" content={`localhost:8000/Blogs/${Item_Details.slug}`}></meta>
             <link rel="canonical" href={`localhost:8000/Blogs/${Item_Details.slug}`}></link>
          </Helmet>
+       
       <div className="blog__wrapper">
       
         <div className="main__div_blog">
