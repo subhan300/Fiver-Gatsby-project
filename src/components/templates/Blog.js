@@ -38,7 +38,7 @@ export default function Home({pageContext}) {
   
   return (
     <>
-        {/* <Header /> */}
+        <Header />
       <div className="blog__wrapper">
       
         <div className="main__div_blog">
