@@ -5,9 +5,9 @@ import "../PagesComponents/BlogComponents/blog.css"
 import logo from '../../assets/blog_images/logo-name.png'
 import avatar from '../../assets/blog_images/Imagen.jpg'
 import BlogSliderCard from "../PagesComponents/BlogComponents/BlogSliderCard"
-// import Slider from 'react-slick'
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 
 export default function Home({pageContext}) {
@@ -121,7 +121,7 @@ export default function Home({pageContext}) {
             clothing unique signature glossy clothes. 
             </p> */}
           </div>
-          {/* <div className="blog__slider">
+          <div className="blog__slider">
           <Slider {...settings}>
             <BlogSliderCard 
               avatar={avatar}
@@ -133,7 +133,7 @@ export default function Home({pageContext}) {
               avatar={avatar}
             />
         </Slider>
-          </div> */}
+          </div>
         </div>
         <div className="blog__intro">
           <img src={logo} className="logo"/>
