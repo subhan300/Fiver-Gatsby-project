@@ -9,11 +9,11 @@ import icon1 from '../../../assets/all   images/icon1.png'
 function ServiceSection() {
   return (
     <>
-      <section class="service_section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="left_content">
+      <section className="service_section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="left_content">
                 <h6>&#60;SERVICIOS&#62;</h6>
                 <h1>
                   Lorem ipsum dolor sit amet, consectetur adipiscing minim
@@ -21,7 +21,7 @@ function ServiceSection() {
                 </h1>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div className="col-lg-6">
               <div class="service_images">
                 <img src={service} alt="" />
               </div>
@@ -29,12 +29,12 @@ function ServiceSection() {
           </div>
         </div>
       </section>
-      <section class="service_item">
-        <div class="container">
-          <div class="row">
-            <div class=" col-lg-3 col-sm-6">
-              <div class="item">
-                <div class="icon">
+      <section className="service_item">
+        <div className="container">
+          <div className="row">
+            <div className=" col-lg-3 col-sm-6">
+              <div className="item">
+                <div className="icon">
                   <img src={icon} alt="" />
                 </div>
                 <h6>
@@ -43,9 +43,9 @@ function ServiceSection() {
                 </h6>
               </div>
             </div>
-            <div class=" col-lg-3 col-sm-6">
-              <div class="item">
-                <div class="icon">
+            <div className=" col-lg-3 col-sm-6">
+              <div className="item">
+                <div className="icon">
                   <img src={icon1} alt="" />
                 </div>
                 <h6>
@@ -55,7 +55,7 @@ function ServiceSection() {
                 </h6>
               </div>
             </div>
-            <div class="col-lg-6"></div>
+            <div className="col-lg-6"></div>
           </div>
         </div>
       </section>
