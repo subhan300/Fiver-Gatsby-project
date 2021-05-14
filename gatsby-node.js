@@ -63,7 +63,7 @@ exports.createPages=async ({actions,graphql})=>{
 // console.log(obj)
     createPage({
       path:`/Blogs/${obj.slug}`,
-      component:path.resolve("./src/components/templates/Blog.js"),
+      Component:path.resolve("./src/components/templates/Blog.js"),
 
       context:{
           Item_Details:obj
@@ -82,7 +82,7 @@ exports.createPages=async ({actions,graphql})=>{
 // console.log(obj)
     createPage({
       path:`/Portfolio/${obj.slug}`,
-      component:path.resolve("./src/components/templates/Portfolio.js"),
+      Component:path.resolve("./src/components/templates/Portfolio.js"),
 
       context:{
           Item_Details:obj
