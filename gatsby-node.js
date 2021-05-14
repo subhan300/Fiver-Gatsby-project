@@ -1,5 +1,5 @@
 
-const { Component } = require("react");
+// const { Component } = require("react");
 
 
 var path=require("path");
