@@ -382,3 +382,15 @@
     width: 70% !important; 
 }     
 } 
+
+
+
+
+@media (max-width: 800px) 
+{ .port__wrapper{ height: 50vh; background-size: cover; background-position:center left ;
+     flex-direction: column; padding-top: 90px; padding-left: 30px; }
+      .main__div_blog { margin-top:100px; } .port__avatar { height: 500px; width: 90%; margin: 0 auto; } 
+      .port__avatar > img { height: 400px; width: 100%; } .suport__sec { flex-direction: column; } 
+      .rightSupport__Sec{ justify-content: center; align-items: center; } .rightSec__title{ text-align: center; } 
+      .rightSupport__Sec > input{ width: 300px; height: 900px; } 
+}
